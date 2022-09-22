@@ -1,0 +1,45 @@
+body {
+  background-color: rgb(18, 129, 194);
+}
+
+main {
+  margin-left: 380px;
+  justify-content: space-evenly;
+}
+
+ul {
+  margin-top: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40pt;
+}
+
+nav {
+  width: 1920px;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 30px;
+  padding-top: 40px;
+  margin: auto;
+}
+
+table {
+  border: 3px;
+  border-style: solid;
+  border-color: white;
+}
+
+th {
+  border: 1px;
+  border-style: solid;
+  min-width: 75px;
+  background-color: aqua;
+  border-color: white;
+}
+
+td {
+  background-color: aquamarine;
+  border: 1px;
+  border-style: solid;
+  text-align: center;
+  border-color: white;
+}
