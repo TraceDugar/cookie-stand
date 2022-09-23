@@ -10,3 +10,8 @@ changed layout from List to Table
 added style sheet to index, and sales
 added photos, added content to homepage, added navigation in between the pages
 styled both pages
+
+
+9/22
+added submission form,
+added grand total
