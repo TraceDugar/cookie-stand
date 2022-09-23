@@ -8,16 +8,39 @@
 </head>
 
 <body>
-
-  <nav>
-    <img src="img/frosted-cookie.jpg" alt="Salmon Cookie">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-    </ul>
-    <img src="img/frosted-cookie.jpg" alt="Salmon cookies">
-  </nav>
-
   <main>
+    
+    <nav>
+      <img src="img/frosted-cookie.jpg" alt="Salmon Cookie">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+      <img src="img/frosted-cookie.jpg" alt="Salmon cookies">
+    </nav>
+    
+    <article>
+      <form id="storeForm">
+        <fieldset>
+          <legend>New Cookie Store</legend>
+
+          <label for="name">Location</label>
+          <input id="name" type="text" name="name">
+
+          <label for="minCust">Min Customers per Hour</label>
+          <input id="minCust" type="number" name="minCust">
+
+          <label for="maxCust">Max Customers per Hour</label>
+          <input id="maxCust" type="number" name="maxCust">
+
+          <label for="avgSales">Avg Cookies per Customer</label>
+          <input id="avgSales" type="number" name="avgSales">
+
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
+    </article>
+    
+
     <section id="store-location"></section>
   </main>
   <footer> </footer>
