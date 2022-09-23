@@ -2,9 +2,17 @@
 //Globals
 let locationSection = document.getElementById('store-location');
 
+let storeForm = document.getElementById('storeForm');
+
 let storeArr = [];
 
+
 let dailyHours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'];
+
+// grabbed from MDN
+function randomSales(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 console.dir(locationSection);
 
@@ -20,6 +28,8 @@ function CookieStore(name, minCust, maxCust, avgSales) {
 
   storeArr.push(this);
 }
+
+
 //Function for generating cookie totals
 CookieStore.prototype.getSales = function () {
   for (let i = 0; i < dailyHours.length; i++) {
@@ -79,12 +89,12 @@ let wordTotal = document.createElement('th');
 wordTotal.textContent = ('Daily Location Total');
 row1.appendChild(wordTotal);
 
-let row3 = document.createElement('tfoot');
-tableElem.appendChild(row3);
+// let row3 = document.createElement('tfoot');
+// tableElem.appendChild(row3);
 
-let wordHTotal = document.createElement('th');
-wordHTotal.textContent = ('Hourly Location Totals');
-row3.appendChild(wordHTotal);
+// let wordHTotal = document.createElement('th');
+// wordHTotal.textContent = ('Hourly Location Totals');
+// row3.appendChild(wordHTotal);
 
 // (name, minCust, maxCust, avgSales)
 new CookieStore('Seattle', 23, 65, 6.3);
@@ -93,6 +103,56 @@ new CookieStore('Dubai', 11, 38, 3.7);
 new CookieStore('Paris', 20, 38, 2.3);
 new CookieStore('Lima', 2, 16, 4.6);
 
+renderAll();
+
+function makeTotalsRow() {
+  let tableFoot = document.createElement('tfoot');
+  document.querySelector('table').appendChild(tableFoot);
+  let row3 = document.createElement('tr');
+  let tableFooter = document.createElement('th');
+  tableFooter.innerText = 'Hourly Totals for All Stores';
+  row3.appendChild(tableFooter);
+  let totalTotal = 0;
+  for (let i = 0; i < dailyHours.length; i++) {
+    let hourlyTotal = 0;
+    for (let j = 0; j < storeArr.length; j++) {
+      hourlyTotal += storeArr[j].cookieTotals[i];
+      totalTotal += storeArr[j].cookieTotals[i];
+    }
+    let tableF = document.createElement('td');
+    tableF.innerText = hourlyTotal;
+    row3.appendChild(tableF);
+  }
+  let tableFoo = document.createElement('td');
+  tableFoo.innerText = totalTotal;
+  row3.appendChild(tableFoo);
+  tableFoot.appendChild(row3);
+  console.log(totalTotal);
+}
+makeTotalsRow();
+
+function addNewStore(event) {
+
+  event.preventDefault();
+  let storeForm = event.target;
+
+  let name = storeForm.name.value;
+  let minCust = parseInt(storeForm['minCust'].value);
+  let maxCust = parseInt(storeForm['maxCust'].value);
+  let avgSales = parseFloat(storeForm['avgSales'].value);
+
+  let newStore = new CookieStore(name, minCust, maxCust, avgSales);
+
+
+  document.querySelector('table').deleteTFoot();
+  newStore.getSales();
+  newStore.render();
+  makeTotalsRow();
+  storeForm.reset();
+}
+
+storeForm.addEventListener('submit', addNewStore);
+//Table 11 Collaboration.
 
 function renderAll() {
   for (let i = 0; i < storeArr.length; i++) {
@@ -100,26 +160,17 @@ function renderAll() {
     storeArr[i].render();
   }
 }
+// for (let i = 0; i < dailyHours.length; i++) {
+//   let hourlyTotal = 0;
+//   for (let j = 0; j < storeArr.length; j++) {
+//     hourlyTotal += storeArr[j].cookieTotals[i];
+//     console.log(storeArr[j].cookieTotals[i]);
+//   }
+//   let hTotal = document.createElement('td');
+//   hTotal.textContent = hourlyTotal;
+//   row3.appendChild(hTotal);
+
+// }
 
 
-renderAll();
-console.log(storeArr);
 
-// grabbed from MDN
-function randomSales(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-//Table 11 Collaboration.
-
-
-for (let i = 0; i < dailyHours.length; i++) {
-  let hourlyTotal = 0;
-  for (let j = 0; j < storeArr.length; j++) {
-    hourlyTotal += storeArr[j].cookieTotals[i];
-    console.log(storeArr[j].cookieTotals[i]);
-  }
-  let hTotal = document.createElement('td');
-  hTotal.textContent = hourlyTotal;
-  row3.appendChild(hTotal);
-}
