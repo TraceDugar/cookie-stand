@@ -43,3 +43,22 @@ td {
   text-align: center;
   border-color: white;
 }
+
+form {
+  /* margin-top: 800px; */
+  border: 3px solid rgb(173, 18, 18);
+  padding: 20px;
+  margin: 2rem 30% 0;
+  margin-bottom: 20px;
+}
+
+
+input {
+  display: block;
+  margin-bottom: 25px;
+}
+
+select {
+  display: block;
+  margin-bottom: 25px;
+}
