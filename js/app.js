@@ -76,8 +76,8 @@ articleElem.appendChild(tableElem);
 let row1 = document.createElement('tr');
 tableElem.appendChild(row1);
 
-let emptySpace = document.createElement('td');
-emptySpace.textContent = ('');
+let emptySpace = document.createElement('th');
+emptySpace.textContent = ('Location:');
 row1.appendChild(emptySpace);
 
 for (let i = 0; i < dailyHours.length; i++) {

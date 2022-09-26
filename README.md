@@ -11,7 +11,14 @@ added style sheet to index, and sales
 added photos, added content to homepage, added navigation in between the pages
 styled both pages
 
-
 9/22
 added submission form,
 added grand total
+
+9/25
+
+made changes to styling upon further review
+upgrade to UI on Sales
+visual upgrades to landing page
+added a merch page w/ stylesheet
+began orderform prototype shirt 1
