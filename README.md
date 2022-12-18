@@ -1,5 +1,13 @@
 # cookie-stand
 
+This is a retail website for a company that sells salmon cookies.  The site features a way to add a new store, and simulates sales and neatly adds them into a chart. There is also a merch page.
+
+## Author
+
+Trace Dugar
+
+## History
+
 9/19 Initial Commit
 created list
 
@@ -22,3 +30,12 @@ upgrade to UI on Sales
 visual upgrades to landing page
 added a merch page w/ stylesheet
 began orderform prototype shirt 1
+
+
+12/18
+
+Convert css units for more responsive design.
+polish old design.
+
+will add more functionality whenever time permits.
+

@@ -9,34 +9,30 @@
   <!-- Google Font: Praise -->
   <!-- source:https://fonts.google.com/specimen/Praise?category=Display,Handwriting&preview.text=Pat%27s%20Salmon%20Cookies&preview.size=61&preview.text_type=custom#styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Praise&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Praise&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <nav>
-      <div class="fish1">
-      <img src="img/fish.jpg" alt="Salmon cookies">
-      </div>
       <div class="title">
         <h1 id="patsTitle">Pat's Salmon Cookies</h1>
         <h2 id="patsSubHead">International</h2>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sales.html">Sales</a></li>
-        <li><a href="merch.html">Merch</a></li>
-      </ul>
-    </div>
-      <img src="img/fish.jpg" alt="Salmon cookies" id="secondNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sales.html">Sales</a></li>
+          <li><a href="merch.html">Merch</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main>
     <div class="salmonBanner">
-      <img src="img/chinook.jpg" alt="Salmon Fish" class ='chin'>
-      <img src="img/chinook.jpg" alt="Salmon Fish" class ='chin'>
-      <img src="img/chinook.jpg" alt="Salmon Fish" class ='chin'>
-      <img src="img/chinook.jpg" alt="Salmon Fish" class ='chin'>
+      <img src="img/chinook.jpg" alt="Salmon Fish" class='chin'>
+      <img src="img/chinook.jpg" alt="Salmon Fish" class='chin'>
+      <img src="img/chinook.jpg" alt="Salmon Fish" class='chin'>
+      <img src="img/chinook.jpg" alt="Salmon Fish" class='chin'>
     </div>
     <div class="locations">
       <h2>Locations</h2>
@@ -46,37 +42,39 @@
     <div class="hours">
       <p>Store hours are 6am - 7pm Locally</p>
     </div>
-    <ul>
-      <li><img src="img/stephen-plopper-UmEYn_GYqFo-unsplash.jpg" alt="Seattle">
-        <div class="adress">
-          <p>2385 Union St.<br>Seattle, WA 98119<br>206-765-315</p>
-        </div>
-      </li>
-      <li><img src="img/jezael-melgoza-7H77FWkK_x4-unsplash.jpg" alt="Tokyo">
-        <div class="adress">
-          <p>2484 Senkawa-dori Ave<br>Tokyo, JP, 176-0006<br>+8136-460-3458</p>
-        </div>
-      </li>
-      <li><img src="img/zq-lee-VbDjv8-8ibc-unsplash.jpg" alt="Dubai">
-        <div class="adress">
-          <p>NO 18 Mishui Ave<br>Dubai, UAE, 00000<br>+971 55 713 8271</p>
-        </div>
-      </li>
-      <li><img src="img/chris-karidis-nnzkZNYWHaU-unsplash.jpg" alt="Paris">
-        <div class="adress">
-          <p>31 Rue de la Banque<br>Paris, Île-de-France, 53136<br>+33 658130773</p>
-        </div>
-      </li>
-      <li><img src="img/aarom-ore-Yrqyn1Gb80k-unsplash.jpg" alt="Lima">
-        <div class="adress">
-          <p> Mza R Lt1 Parque El Asesor - Ate<br>Lima, Lima, Perú<br>+51 1 9453240 </p>
-        </div>
-      </li>
+    <div id="locationContainer">
+      <ul>
+        <li><img class="locationImage" src="img/stephen-plopper-UmEYn_GYqFo-unsplash.jpg" alt="Seattle">
+          <div class="adress">
+            <p>2385 Union St.<br>Seattle, WA 98119<br>206-765-315</p>
+          </div>
+        </li>
+        <li><img class="locationImage" src="img/jezael-melgoza-7H77FWkK_x4-unsplash.jpg" alt="Tokyo">
+          <div class="adress">
+            <p>2484 Senkawa-dori Ave<br>Tokyo, JP, 176-0006<br>+8136-460-3458</p>
+          </div>
+        </li>
+        <li><img class="locationImage" src="img/zq-lee-VbDjv8-8ibc-unsplash.jpg" alt="Dubai">
+          <div class="adress">
+            <p>NO 18 Mishui Ave<br>Dubai, UAE, 00000<br>+971 55 713 8271</p>
+          </div>
+        </li>
+        <li><img class="locationImage" src="img/chris-karidis-nnzkZNYWHaU-unsplash.jpg" alt="Paris">
+          <div class="adress">
+            <p>31 Rue de la Banque<br>Paris, Île-de-France, 53136<br>+33 658130773</p>
+          </div>
+        </li>
+        <li><img class="locationImage" src="img/aarom-ore-Yrqyn1Gb80k-unsplash.jpg" alt="Lima">
+          <div class="adress">
+            <p> Mza R Lt1 Parque El Asesor - Ate<br>Lima, Lima, Perú<br>+51 1 9453240 </p>
+          </div>
+    </div>
+    </li>
     </ul>
 
     <!-- Salmon Border -->
     <section id="boarderSalmonMid">
-      <ul id= "salmon">
+      <ul id="salmon">
         <li id="fish"><img src="img/salmon.png"></li>
         <li id="fish"><img src="img/salmon.png"></li>
       </ul>
@@ -93,8 +91,8 @@
         <li id="cutter"><img src='img/cutter.jpg'></li>
       </ul>
       <div class="aboutus">
-        <div class="familypic">
-          <img src="img/family.jpg" alt="Pat's Family">
+        <div class="familyPicDiv">
+          <img id="familyPic" src="img/family.jpg" alt="Pat's Family">
         </div>
     </article>
     <article id="ParaG">
@@ -146,7 +144,7 @@
   </main>
   <footer>
     <ul id="footNotes">
-      
+
       <li id="footR"><a href="">Careers</a></li>
       <li id="footR"><a href="sales.html">Corporate</a></li>
       <li id="footR"><a href="sales.html">Bulk Order</a></li>
